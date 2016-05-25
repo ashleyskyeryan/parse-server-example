@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Download the app!</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,width=device-width" />
+        <link rel="stylesheet" type="text/css" href='/stylesheets/main.css'>
+    </head>
+    <body>
+        <div class="poll-upsell">
+            <div class="poll-title">
+
+                <% if (createdBy.has('buddyIcon')) { %>
+                    <img src="<%- createdBy.get('buddyIcon').url() %>" alt="user image" />
+                <% } %>
+
+                <div class="text">
+                    <h2>Vote on my poll in Love It</h2>
+                    <h1><%- question.get('text').replace(/\n/g, '<br />') %></h1>
+
+                </div>
+            </div>
+            <div class="poll">
+                <div class="image">
+
+                    <img src="<%- question.get('image').url() %>" class="poll-image" alt="poll options" />
+
+                    <div class="screen"></div>
+                    <img src="/images/poll_notch_24x10@2x.png" class="notch" alt="notch" />
+                    <div class="text">You could be the
+                        <br />deciding vote!</div>
+                    <div class="bar left"></div>
+                    <div class="bar right"></div>
+                </div>
+
+                <!--******** CTA LINK ******** -->
+                <% if (platform === 'Android') { %>
+                    <a href="market://details?id=co.projectlittle.poll" class="android">
+                        Download the app
+                    </a>
+                <% } else { %>
+                    <div class="coming-soon ios">
+                        <div class="available-on-android">Available on Android</div>
+                        <div class="coming-soon-ios">Coming soon on iOS</div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var revealed = false;
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    var image = document.querySelector('.poll .image');
+                    var timeout = setTimeout(startAnimation, 3000);
+                    function startAnimation() {
+                        console.log('start');
+                        if (revealed) {
+                            return;
+                        }
+                        image.classList.add('animate');
+                    }
+
+                    image.addEventListener('click', startAnimation);
+                });
+            })();
+        </script>
+    </body>
+</html>

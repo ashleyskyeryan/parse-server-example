@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "ignore": [
+    "assets/**/*.{js,jsx}"
+  ],
+  "watch":[
+    "src/**/*.js",
+    "lib/**/*.js"
+  ],
+  "env":{
+    "NODE_ENV":"development"
+  }
+}

@@ -1,0 +1,18 @@
+<!-- Include the header partial -->
+<% include ../_header %>
+
+<!-- content -->
+<div class="main_content">
+  	<% posts.forEach(function(post) { %>
+  		<div class="post_link">
+	  		<h1><a href="<%= '/posts/' + post.id %>"><%= post.get("text") %></a></h1>
+	  		<h5><%= formatTime(post.createdAt) %></h5>
+            <div class="image">
+                <img src="<%- post.get('image').url() %>" class="poll-image" alt="poll options" />
+            </div>
+  		</div>
+    <% }) %>
+</div>
+
+<!-- Include the footer partial -->
+<% include ../_footer %>

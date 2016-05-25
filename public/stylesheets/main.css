@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: #ffffff;
+}
+
+.contact body {
+    font-family: "Helvetica Neue", "Helvetica", "Ariel", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+div#appicon {
+    background-image: url("../images/AppIcon-180.png");
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto;
+    margin-top: 80px;
+
+    border-radius: 8px;
+}
+
+div#contact {
+    width: 320px;
+    text-align: center;
+    margin: 0 auto;
+
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+
+.android.hidden, .ios.hidden {
+    display: none;
+}
+
+.poll-upsell {
+    width: 100%;
+    max-width: 412px;
+    margin: 0 auto;
+}
+.poll-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 18px 14px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.poll-title img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+.poll-title .text {
+    padding-left: 14px;
+}
+.poll-title .text h2 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 13px;
+    font-weight: 100;
+    margin-bottom: 2px;
+
+}
+.poll-title .text h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    font-weight: 400;
+}
+.poll .image {
+    position: relative;
+}
+.poll .bar {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(255,255,255,0.5);
+}
+.poll .bar.left {
+    left: 25%;
+    height: 0%;
+}
+.poll .bar.right {
+    left: 75%;
+    height: 0%;
+}
+
+.poll img.notch {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 24px;
+}
+.poll .image .screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+background-color: rgba(0,0,0,0.0);
+}
+.poll .image .text {
+    position: absolute;
+    width: 100%;
+    color: #e6e6e6;
+    line-height: 1.3em;
+    text-align: center;
+    top: 25%;
+    font-size: 19px;
+    font-weight: 100;
+    opacity: 0;
+}
+.poll .image img.poll-image {
+    display: block;
+    width: 100%;
+}
+.poll a {
+    display: block;
+    background-color: #00b9f1;
+    text-align: center;
+
+    margin: 10px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    width: 200px;
+}
+
+.poll .animate.image .screen {
+        background-color: rgba(0, 0, 0, 0.76);
+        animation: fade-in 2s 1 linear;
+}
+.poll .animate.image .text {
+    opacity: 1;
+    animation: text-fade-in 2s 1 linear;
+}
+.poll .animate.image .bar.left {
+    height: 50%;
+    animation: left-bar 2s 1 ease-in;
+}
+.poll .animate.image .bar.right {
+    height: 50%;
+    animation: right-bar 2s 1 ease-in;
+}
+
+.poll .coming-soon {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.poll .coming-soon .available-on-android {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.poll .coming-soon .coming-soon-ios {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+@keyframes fade-in {
+    0% {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+@keyframes text-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+@keyframes left-bar {
+    0% {
+        height: 0;
+    }
+    33% {
+        height: 50%;
+    }
+    66% {
+        height: 65%;
+    }
+    100% {
+        height: 50%;
+    }
+}
+
+@keyframes right-bar {
+    0% {
+        height: 0;
+    }
+    33% {
+        height: 60%;
+    }
+    66% {
+        height: 30%;
+    }
+    100% {
+        height: 50%;
+    }
+}
